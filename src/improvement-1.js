@@ -5,12 +5,9 @@
  */
 
 // FUNCTION 1
-export default function cntRbt(ls) {
-  var cnt = 0;
-  for (var i = 0; i < ls.length; i++) {
-    if (ls[i] == "R") {
-      cnt++;
-    }
-  }
-  return cnt;
+export default function countOccurence(word) {
+  // Spread the string into an array,
+  // Then filter the array for "R".
+  // Return the number of elements in the filtered array.
+  return [...word].filter((letter) => letter === "R").length;
 }
