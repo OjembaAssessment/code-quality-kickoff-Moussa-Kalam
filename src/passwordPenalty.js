@@ -12,11 +12,11 @@ export default function penaltyPoints(password = "") {
   if (!password) return 0;
 
   /**
-   * If password contains two consecutive characters,
-   * map each one of them to 1 and get their sum
-   *
    * If password contains three or more consecutive characters,
-   * map each one of them to 2 and get their sum
+   * map each group of consecutive characters to 2 and get their sum
+   *
+   * If password contains two consecutive characters,
+   * map each group of consecutive characters to 1 and get their sum
    */
   if (/(\w)\1\1+/g.test(password)) {
     return password
